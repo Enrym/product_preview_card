@@ -1,0 +1,148 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    background-color:  hsl(30, 38%, 92%);
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 550px; 
+    border-radius: 10px;
+    background-color: #fff;
+    margin: 0 5%;
+    
+}
+
+.flex-left {
+    background-image:url(images/image-product-desktop.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px 0px 0px 10px;
+    background-color: rgb(118, 115, 115);
+    
+}
+
+.flex-left, .flex-right {
+    flex-basis: 50%;
+    height: 430px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 100%;
+    padding: 10%;
+}
+
+.perfume {
+    letter-spacing: 8px;
+    font-size: 13px;
+    color:hsl(228, 12%, 48%);
+}
+
+h1 {
+    font-family: 'Fraunces', serif;
+    margin: 10% 0;
+    color: hsl(212, 21%, 14%);
+}
+
+.content p:not(.prices p, .btn p) {
+    margin-bottom: 10%;
+    font-size: 13px;
+    line-height: 20px;
+    color:hsl(228, 12%, 48%);
+}
+
+.prices {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    
+
+}
+
+.current {
+    font-family: 'Fraunces', serif;
+    font-size: 2rem;
+    flex-basis: 50%;
+    color: hsl(158, 36%, 37%);
+}
+
+.previous {
+    text-decoration:line-through;
+    flex-basis: 50%;
+    margin-left: 10%;
+    color: hsl(212, 21%, 14%);
+}
+
+.btn {
+    background-color:hsl(158, 36%, 37%);
+    width: 100%;
+    display: flex;
+    padding: 10px 0;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    margin-top: 10%;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: hsl(212, 21%, 14%);
+}
+
+.btn p {
+    color: #fff;
+    font-size: 13px;
+    margin-left: 15px;
+}
+
+@media (max-width: 580px) {
+    .wrapper {
+        flex-direction: column;
+       
+    }
+
+    .flex-left{
+       background-image: url(images/image-product-mobile.jpg);
+       background-position: center;
+       background-repeat: no-repeat;
+       background-size: cover;
+       border-radius: 10px 10px 0px 0px;
+       background-color: rgb(118, 115, 115);
+       flex-basis: auto;
+       width: 100%;
+    }
+    
+    .flex-right {
+        flex-basis: content;
+    }
+}
+
+.attribution {
+    text-align: center;
+    max-width: 80%;
+    padding-top: 5%;
+    color:hsl(228, 12%, 48%);
+    font-size: 9px;
+}
+
+.attribution a {
+    color:hsl(212, 21%, 14%);
+}
